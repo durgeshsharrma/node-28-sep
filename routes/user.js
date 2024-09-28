@@ -14,7 +14,7 @@ router.post("/users" ,async(req ,  res) => {
       await allusers.save().then((res) => {
         console.log(res);
       })
-      req.flash("success " , "User added successfuly");
+      req.flash("success" , "User added successfuly");
       res.redirect("/allusers")
 })
 
