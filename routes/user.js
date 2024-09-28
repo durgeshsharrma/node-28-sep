@@ -4,24 +4,39 @@ const users = require('../models/user');
 
 
 router.get("/signup" , (req , res) => {
-    res.render("user/signup");
+    try{
+      res.render("user/signup");
+    }
+    catch(err){
+      console.log(err);
+    }
 })
 
 
 router.post("/users" ,async(req ,  res) => {
     
-      let allusers = new users(req.body);
+      try{
+        let allusers = new users(req.body);
       await allusers.save().then((res) => {
         console.log(res);
       })
       req.flash("success" , "User added successfuly");
       res.redirect("/allusers")
+      }
+      catch(err){
+        console.log(err)
+      }
 })
 
 router.get("/allusers" , async(req , res) => {
+   try{
     let allusers =await users.find({});
     res.render('user/allusers.ejs' , {student : allusers});
+   }
 
+   catch(err){
+    console.log(err)
+  }
 
 })
 
