@@ -50,3 +50,15 @@ module.exports.editStudent = async(req , res) => {
         console.log(err);
     }
 }
+
+
+module.exports.deleteStudent = async(req,res) => {
+    try{
+        let {id} = req.params;
+        await student.findByIdAndDelete(id);
+        res.redirect("/students")
+    }
+    catch(err){
+        console.log(err.message);
+    }
+}

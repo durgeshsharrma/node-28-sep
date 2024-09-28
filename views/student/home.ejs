@@ -12,7 +12,8 @@
                  <th>Father Name</th>
                  <th>Adharcard No</th>
                  <th>Mobile No</th>
-                 <th>Actions</th>
+                 <th>Edit Actions</th>
+                 <th>Delete Actions</th>
             </tr>
             <% for(student of students) { %>
              <tr>
@@ -23,6 +24,11 @@
                 <td><%= student.adharcardNo  %></td>
                 <td><%= student.phoneNo %></td>
                 <td><a href="/students/<%= student._id %>/edit"><button class="btn btn-warning w-75">Edit</button></a></td>
+                <td>
+<form  class="form-inline" method="post" action="/students/<%= student._id %>?_method=DELETE"><a href="/students/<%= student._id %>"><button class="btn btn-danger w-75">Delete</button></a>
+</form>   
+             </td>
+
             </tr>
 
           <% } %> 

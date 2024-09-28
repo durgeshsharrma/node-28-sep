@@ -33,6 +33,11 @@ router.put('/students/:id' , async(req , res) => {
 })
 
 
+router.delete('/students/:id' , async(req , res) => {
+    studentController.deleteStudent(req,res);
+})
+
+
 
 
 
