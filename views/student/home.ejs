@@ -1,0 +1,31 @@
+<% layout('/layouts/boilerplate') -%>
+
+
+<div class="row">
+    <h4 class="text-center mt-3">Student List</h4>
+    <table class="table text-center mt-3">
+        <thread>
+            <tr>
+                 <th>Roll No</th>
+                 <th>First Name</th>
+                 <th>Last Name</th>
+                 <th>Father Name</th>
+                 <th>Adharcard No</th>
+                 <th>Mobile No</th>
+                 <th>Actions</th>
+            </tr>
+            <% for(student of students) { %>
+             <tr>
+                <td><%= student.rollNo  %></td>
+                <td><%= student.firstName  %></td>
+                <td><%= student.lastName %></td>
+                <td><%= student.fathersName %></td>
+                <td><%= student.adharcardNo  %></td>
+                <td><%= student.phoneNo %></td>
+                <td><a href="/students/<%= student._id %>/edit"><button class="btn btn-warning w-75">Edit</button></a></td>
+            </tr>
+
+          <% } %> 
+        </thread>
+    </table>
+</div>

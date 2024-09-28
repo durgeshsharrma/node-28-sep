@@ -1,0 +1,80 @@
+<% layout("/layouts/Boilerplate.ejs") %>
+
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <h1>Signup</h1>
+        <form action="/users" method="post" novalidate class="needs-validation">
+            <div class="mb-3 mt-4">
+              <label for="username" class="form-label">Username</label>
+              <input id="username" name="username" type="text" class="form-control" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+           </div>
+
+           <div class="row">
+            <div class="mb-3 col-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input id="firstName" name="first_name" type="text" class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+             </div>
+    
+             <div class="mb-3 col-6">
+                <label for="LastName" class="form-label">Last Name</label>
+                <input id="LastName" name="last_name" type="text" class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+             </div>
+           </div>
+
+<div class="row">
+         
+            <div class="mb-3 col-2">
+                <label for="countrycode" class="form-label">Country Code</label>
+                <input placeholder="+ 91" id="countrycode" name="country_code" type="text" class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+             </div>
+    
+             <div class="mb-3 col-10">
+                <label for="phoneNo" class="form-label">Phone No</label>
+                <input id="phoneNo" name="phoneNo" type="text" class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+             </div>
+        </div>
+ 
+
+         
+
+
+         <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="email" class="form-control" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+         </div>
+
+         <div class="mb-3">
+            <label for="email" class="form-label">Password</label>
+            <input id="email" name="password" type="password" class="form-control" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+         </div>
+
+
+
+           <button class="btn w-100 btn-danger">Signup</button>
+        </form>
+    </div>
+</div>
+
+

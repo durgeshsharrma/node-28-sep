@@ -1,0 +1,35 @@
+.container{
+    background-color: #F4F3EE;
+}
+
+body{
+    background-color: #F4F3EE; ;
+}
+
+.navbar{
+    background-color: #8A817C !important;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    height: 4rem;
+}
+
+
+.signup-btn{
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+    
+}
+
+.nav-link{
+    color: black;
+    font-weight: 300;
+}
+
+.navbar-brand{
+    font-weight: 600 !important;
+    font-size: 1.75rem !important;
+    margin-right: 2rem;
+}
+
+
+

@@ -1,0 +1,22 @@
+<% if(succMsg && succMsg.length){ %>
+    <div class="row">
+        
+            <div class="alert col-8 offset-2 alert-dismissible show alert-success" role="alert">
+               <%= succMsg %>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        
+    </div>
+<% } %>
+
+
+<% if(errMsg && errMsg.length){ %>
+    <div class="row">
+        
+            <div class="alert col-6 offset-2 alert-dismissible show alert-danger" role="alert">
+               <%= errMsg %>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        
+    </div>
+<% } %>
